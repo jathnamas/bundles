@@ -14,11 +14,15 @@ class AllVendors extends React.Component {
 
     return (
       <div className="mapContainer">
+        <link
+          rel="stylesheet"
+          href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"
+        />
         <MapContainer
           center={position}
           zoom={13}
           scrollWheelZoom={false}
-          style={{height: '200px', width: '300px'}}
+          style={{height: '800px', width: '900px'}}
         >
           <TileLayer
             attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
