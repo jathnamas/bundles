@@ -8,7 +8,7 @@ export const getVendors = vendors => ({
   vendors
 })
 
-export const getVendor = vendor => ({
+export const getSingleVendor = vendor => ({
   type: GET_VENDOR,
   vendor
 })
@@ -28,7 +28,7 @@ export const getOneVendor = id => {
   return async dispatch => {
     try {
       const {data} = await axios.get(`/api/vendors/${id}`)
-      dispatch(getVendor(data))
+      dispatch(getSingleVendor(data))
     } catch (err) {
       console.log(err)
     }

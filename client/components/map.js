@@ -34,7 +34,7 @@ export const Map = props => {
             starRatedColor: 'black',
             isHalf: true
           }
-          console.log(stars)
+
           return (
             <Marker
               key={vendor.id}

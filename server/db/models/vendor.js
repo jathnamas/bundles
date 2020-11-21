@@ -33,6 +33,9 @@ const Vendor = db.define('vendor', {
       return () => this.getDataValue('password')
     }
   },
+  phone: {
+    type: Sequelize.STRING
+  },
   lat: {
     type: Sequelize.DECIMAL
   },
@@ -83,7 +86,7 @@ const Vendor = db.define('vendor', {
     }
   },
   profilePic: {
-    type: Sequelize.STRING
+    type: Sequelize.TEXT
   }
 })
 

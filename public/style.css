@@ -82,3 +82,93 @@ form div {
 .vendorPopup h1 {
   font-size: 15px;
 }
+
+.vendorProfileContainer {
+  padding: 30px;
+  display: inline-flex;
+  justify-content: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 1000px;
+  width: 100%;
+  background-color: pink;
+  margin: 10px;
+}
+
+.vendorHeader {
+  color: white;
+  width: 500px;
+  height: 1000px;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: black;
+  margin-bottom: auto;
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 20px;
+  border-radius: 20px;
+  border-style: groove;
+}
+
+.vendorHeader h1 {
+  margin-left: 37%;
+}
+
+.vendorHeader img {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  margin-left: 22%;
+}
+
+.vendorHeader p {
+  margin-left: 39%;
+}
+
+.vendorHeader h2 {
+  margin-left: 43%;
+}
+
+.vendorHeader h3 {
+  margin-left: 36%;
+}
+
+.vendorWork {
+  width: 65%;
+  height: 1000px;
+  background-color: black;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px;
+  border-radius: 20px;
+  border-style: groove;
+}
+
+.vendorInfo {
+  height: 200px;
+}
+
+.vendorInfo h1 {
+  font-size: small;
+}
+
+.vendorInfo ul {
+  font-size: large;
+}
+
+.contactInfo h4 {
+  margin-left: 34%;
+  font-size: large;
+}
+
+.contactInfo h5 {
+  margin-left: 27%;
+  font-size: large;
+}
+
+.contactInfo h6 {
+  margin-left: 30%;
+  font-size: large;
+}
