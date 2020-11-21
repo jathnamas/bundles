@@ -66,3 +66,19 @@ form div {
   margin-left: 18%;
   margin-top: 30px;
 }
+
+.vendorPopup {
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  font-size: large;
+  margin-bottom: 30px;
+}
+
+.vendorPopup h1 {
+  font-size: 15px;
+}

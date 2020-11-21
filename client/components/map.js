@@ -1,6 +1,7 @@
 import React from 'react'
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import L from 'leaflet'
+import ReactStars from 'react-star-ratings'
 
 export const Map = props => {
   const position = [43.036358, -87.914436]
@@ -11,10 +12,6 @@ export const Map = props => {
 
   return (
     <div className="mapContainer">
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
-      />
       <MapContainer
         center={position}
         zoom={13}
@@ -28,15 +25,33 @@ export const Map = props => {
 
         {vendors.map(vendor => {
           const vendorPosition = [vendor.lat, vendor.lon]
+          const stars = {
+            starDimension: '15px',
+            starSpacing: '1px',
+            rating: Number(vendor.vendorRating),
+            edit: false,
+            starRatedColor: 'black',
+            isHalf: true
+          }
+          console.log(stars)
           return (
             <Marker
               key={vendor.id}
               position={vendorPosition}
               iconUrl={newMarker}
-            />
+            >
+              <Popup>
+                <div className="vendorPopup">
+                  <h1>{vendor.userName}</h1>
+                  <br />
+                  <ReactStars {...stars} />
+                  <br />
+                  {vendor.vendorAveragePrice}
+                </div>
+              </Popup>
+            </Marker>
           )
         })}
-        {/* <Marker   position={vendorPosition} iconUrl= {newMarker} /> */}
       </MapContainer>
     </div>
   )
