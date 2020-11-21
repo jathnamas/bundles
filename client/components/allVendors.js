@@ -10,23 +10,21 @@ class AllVendors extends React.Component {
   }
 
   render() {
-    const vendors = this.props.vendors
-    console.log(vendors)
     return (
       <div>
-        <div>
-          {vendors.map(vendor => {
-            return (
-              <div className="vendorContainer" key={vendor.id}>
-                <h1>{vendor.userName}</h1>
-                <h2>{vendor.vendorAveragePrice}</h2>
-                <h3>{vendor.vendorRating}</h3>
-              </div>
-            )
-          })}
-        </div>
-        <Map />
+        <Map vendors={this.props.vendors} />
       </div>
+      // <div>
+      //   {/* <div>
+      //     {vendors.map(vendor => {
+      //       return (
+      //         <div className="vendorContainer" key={vendor.id}>
+      //           <h1>{vendor.userName}</h1>
+      //           <h2>{vendor.vendorAveragePrice}</h2>
+      //           <h3>{vendor.vendorRating}</h3>
+      //         </div> */}
+      //       )
+      //     })}
     )
   }
 }

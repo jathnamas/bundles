@@ -11,7 +11,10 @@ router.get('/', async (req, res, next) => {
         'userName',
         'vendorAveragePrice',
         'vendorRating',
-        'profilePic'
+        'profilePic',
+        'lat',
+        'lon',
+        'vendorType'
       ]
     })
     res.json(vendors)

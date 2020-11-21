@@ -2,17 +2,12 @@ import React from 'react'
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import L from 'leaflet'
 
-export const Map = () => {
+export const Map = props => {
   const position = [43.036358, -87.914436]
-  const newMarker = L.icon({iconUrl: './icons/049-lips.png'})
-  // const newIcon = L.icon({
-  //   iconUrl: '/icons/049-lips.png',
-  //   iconSize: [38, 95],
-  //   iconAnchor: [22, 94],
-  //   popupAnchor: [-3, -76],
-  //   shadowSize: [68, 95],
-  //   shadowAnchor: [22, 94]
-  // });
+
+  const newMarker = L.icon({iconUrl: ''})
+
+  const vendors = props.vendors
 
   return (
     <div className="mapContainer">
@@ -30,7 +25,18 @@ export const Map = () => {
           url="https://api.mapbox.com/styles/v1/jathnamas/ckh3vws1008cb19qhlbu75xsy/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiamF0aG5hbWFzIiwiYSI6ImNrZndwemt5dzE1cDQzMHA5Z2NqdTF6bmoifQ.wy5dPa5sJdAIm14W3hlyZg"
           attribution="Map data &copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors, <a href=&quot;https://creativecommons.org/licenses/by-sa/2.0/&quot;>CC-BY-SA</a>, Imagery &copy; <a href=&quot;https://www.mapbox.com/&quot;>Mapbox</a>"
         />
-        <Marker iconUrl="/icons/049-lips.png" position={position} />
+
+        {vendors.map(vendor => {
+          const vendorPosition = [vendor.lat, vendor.lon]
+          return (
+            <Marker
+              key={vendor.id}
+              position={vendorPosition}
+              iconUrl={newMarker}
+            />
+          )
+        })}
+        {/* <Marker   position={vendorPosition} iconUrl= {newMarker} /> */}
       </MapContainer>
     </div>
   )
