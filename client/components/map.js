@@ -2,6 +2,7 @@ import React from 'react'
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import L from 'leaflet'
 import ReactStars from 'react-star-ratings'
+import {Link} from 'react-router-dom'
 
 export const Map = props => {
   const position = [43.036358, -87.914436]
@@ -42,7 +43,9 @@ export const Map = props => {
             >
               <Popup>
                 <div className="vendorPopup">
-                  <h1>{vendor.userName}</h1>
+                  <Link to={`/vendors/${vendor.id}`}>
+                    <h1>{vendor.userName}</h1>
+                  </Link>
                   <br />
                   <ReactStars {...stars} />
                   <br />
