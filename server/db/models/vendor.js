@@ -33,8 +33,11 @@ const Vendor = db.define('vendor', {
       return () => this.getDataValue('password')
     }
   },
-  address: {
-    type: Sequelize.STRING
+  lat: {
+    type: Sequelize.DECIMAL
+  },
+  lon: {
+    type: Sequelize.DECIMAL
   },
   bankInfo: {
     type: Sequelize.STRING
@@ -53,7 +56,7 @@ const Vendor = db.define('vendor', {
     defaultValue: true
   },
   vendorRating: {
-    type: Sequelize.DECIMAL(10, 2),
+    type: Sequelize.DECIMAL,
     validate: {
       notEmpty: true,
       min: 3.0
