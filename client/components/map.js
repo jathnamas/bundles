@@ -1,23 +1,24 @@
 import React from 'react'
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
-import L from 'leaflet'
 import ReactStars from 'react-star-ratings'
 import {Link} from 'react-router-dom'
 
 export const Map = props => {
   const position = [43.036358, -87.914436]
-
-  const newMarker = L.icon({iconUrl: ''})
-
   const vendors = props.vendors
 
   return (
     <div className="mapContainer">
+      {/* <OtherMap /> */}
+
       <MapContainer
         center={position}
         zoom={13}
         scrollWheelZoom={false}
-        style={{height: '800px', width: '900px'}}
+        style={{height: '1200px', width: '1200px'}}
+        onClick={() => {
+          return <Popup />
+        }}
       >
         <TileLayer
           url="https://api.mapbox.com/styles/v1/jathnamas/ckh3vws1008cb19qhlbu75xsy/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiamF0aG5hbWFzIiwiYSI6ImNrZndwemt5dzE1cDQzMHA5Z2NqdTF6bmoifQ.wy5dPa5sJdAIm14W3hlyZg"
@@ -27,29 +28,25 @@ export const Map = props => {
         {vendors.map(vendor => {
           const vendorPosition = [vendor.lat, vendor.lon]
           const stars = {
-            starDimension: '15px',
+            starDimension: '20px',
             starSpacing: '1px',
             rating: Number(vendor.vendorRating),
             edit: false,
-            starRatedColor: 'black',
+            starRatedColor: 'pink',
             isHalf: true
           }
 
           return (
-            <Marker
-              key={vendor.id}
-              position={vendorPosition}
-              iconUrl={newMarker}
-            >
+            <Marker key={vendor.id} position={vendorPosition}>
               <Popup>
                 <div className="vendorPopup">
                   <Link to={`/vendors/${vendor.id}`}>
                     <h1>{vendor.userName}</h1>
                   </Link>
+                  <img className="popUpPic" src={vendor.profilePic} />
                   <br />
-                  <ReactStars {...stars} />
+                  <ReactStars className="stars" {...stars} />
                   <br />
-                  {vendor.vendorAveragePrice}
                 </div>
               </Popup>
             </Marker>

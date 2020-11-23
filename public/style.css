@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coustard&family=Holtwood+One+SC&display=swap');
+
 body {
   font-family: sans-serif;
-  background: #181617;
+  background: #202040;
   display: grid;
 }
 
@@ -43,27 +46,48 @@ form div {
 }
 
 .container h1 {
+  font-family: 'Holtwood One SC', serif;
   color: plum;
   font-size: 10em;
   font-weight: 900;
   text-shadow: 3px 3px 4px rgb(219, 11, 11);
 }
 
-.links {
-  text-decoration: none;
+.container2 {
+  position: absolute;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container2 h1 {
+  margin-top: -20px;
+  font-family: 'Holtwood One SC', serif;
   color: plum;
-  font-size: 1em;
+  font-size: 5em;
   font-weight: 900;
   text-shadow: 3px 3px 4px rgb(219, 11, 11);
 }
 
+.links {
+  text-decoration: none;
+  text-shadow: 3px 3px 4px rgb(219, 11, 11);
+  color: plum;
+  font-size: 1em;
+  font-weight: 900;
+}
+
 .mapContainer {
+  background: #202040;
+  background-color: #202040;
   display: block;
-  height: 1000px;
-  width: 1200px;
+  height: 100%;
+  width: 100%;
   border-color: plum;
   border-radius: 5px;
-  margin-left: 18%;
   margin-top: 30px;
 }
 
@@ -73,36 +97,56 @@ form div {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100px;
-  width: 100px;
+  height: 215px;
+  width: 200px;
   font-size: large;
   margin-bottom: 30px;
+}
+
+.popUpPic {
+  border-radius: 50%;
+  width: 140px;
+  height: 125px;
+  position: center;
+}
+
+.stars {
+  margin-left: 70px;
 }
 
 .vendorPopup h1 {
   font-size: 15px;
 }
 
+.vendorPopup h2 {
+  font-size: 20px;
+  margin-bottom: -50px;
+}
+
 .vendorProfileContainer {
   padding: 30px;
   display: inline-flex;
   justify-content: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 1000px;
+  height: 100%;
   width: 100%;
-  background-color: pink;
+  box-shadow: 3px -12px 32px 12px rgba(0, 0, 0, 0.41);
+  background-color: #202040;
   margin: 10px;
 }
 
 .vendorHeader {
-  color: white;
+  font-family: 'Holtwood One SC', serif;
+  color: plum;
+  text-shadow: 3px 3px 4px rgb(219, 11, 11);
+  box-shadow: 3px -12px 32px 1px rgb(219, 11, 22);
   width: 500px;
   height: 1000px;
   cursor: pointer;
   overflow: hidden;
-  background-color: black;
+  background-color: #8675a9;
   margin-bottom: auto;
   margin-top: auto;
   align-self: flex-start;
@@ -113,6 +157,9 @@ form div {
 
 .vendorHeader h1 {
   margin-left: 37%;
+  font-family: 'Holtwood One SC', serif;
+  color: plum;
+  text-shadow: 3px 3px 1px rgb(219, 11, 11);
 }
 
 .vendorHeader img {
@@ -135,12 +182,11 @@ form div {
 }
 
 .vendorWork {
-  width: 65%;
-  height: 1000px;
-  background-color: black;
+  width: 1200px;
+  height: 650px;
+  box-shadow: 3px -12px 32px 1px rgb(219, 11, 22);
+  background-color: #8675a9;
   display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
   padding: 20px;
   border-radius: 20px;
   border-style: groove;
@@ -151,11 +197,24 @@ form div {
 }
 
 .vendorInfo h1 {
-  font-size: small;
+  font-family: 'Coustard', serif;
+  font-size: large;
 }
 
 .vendorInfo ul {
+  font-family: 'Coustard', serif;
   font-size: large;
+}
+
+.vendorInfo li {
+  font-family: 'Coustard', serif;
+}
+
+.contactInfo .btn {
+  padding: 1rem 1.5rem;
+  background-color: purple;
+  margin: 2px;
+  margin-left: 20px;
 }
 
 .contactInfo h4 {
@@ -172,3 +231,108 @@ form div {
   margin-left: 30%;
   font-size: large;
 }
+
+.carousel {
+  background-color: #8675a9;
+  align-self: flex-start;
+  margin-left: 5px;
+  padding: 10px;
+  width: 450px;
+  height: 600px;
+}
+
+.carouselPics {
+  border-radius: 5%;
+
+  width: 400px;
+  height: 550px;
+}
+
+.vendorReviews {
+  display: block;
+  background-color: #8675a9;
+
+  height: 225px;
+  width: 700px;
+  margin-right: 10px;
+  padding: 15px;
+  font-family: 'Holtwood One SC', serif;
+  color: plum;
+  text-shadow: 3px 3px 4px rgb(145, 14, 14);
+}
+
+.vendorReviews h1 {
+  margin-bottom: 75px;
+  font-size: x-large;
+  padding: 5px;
+  margin-right: 3px;
+  font-family: 'Holtwood One SC', serif;
+  color: plum;
+  text-shadow: 3px 3px 4px rgb(145, 14, 14);
+}
+
+.vendorReviews2 {
+  margin-bottom: 75px;
+  background-color: #8675a9;
+  height: 400px;
+  width: 700px;
+  margin-right: 10px;
+  padding: 15px;
+  font-family: 'Holtwood One SC', serif;
+  color: plum;
+  text-shadow: 3px 3px 4px rgb(145, 14, 14);
+}
+.vendorReviews2 h1 {
+  margin-bottom: 105px;
+  font-size: x-large;
+  padding: 5px;
+  margin-right: 3px;
+  font-family: 'Holtwood One SC', serif;
+  color: plum;
+  text-shadow: 3px 3px 4px rgb(145, 14, 14);
+}
+
+.vendorReviews p {
+  margin-bottom: 100px;
+  font-family: 'Coustard', serif;
+}
+
+.vendorReviews2 p {
+  margin-bottom: 122px;
+  font-family: 'Coustard', serif;
+}
+
+.verified {
+  font-family: 'Holtwood One SC', serif;
+  color: plum;
+  text-shadow: 3px 3px 4px rgb(145, 14, 14);
+  box-shadow: 3px -12px 32px 1px rgb(219, 11, 22);
+  background-color: #8675a9;
+  height: 550px;
+  width: 1200px;
+  position: relative;
+  margin-left: 31%;
+  margin-top: -300px;
+  border-radius: 20px;
+  padding: 10px;
+  border-style: groove;
+  font-family: 'Coustard', serif;
+  font-size: large;
+}
+
+.verified h1 {
+  display: block;
+  text-shadow: 3px 3px 4px rgb(219, 11, 11);
+  color: plum;
+  font-family: 'Holtwood One SC', serif;
+}
+
+/* .cardTwo{
+  margin-left: 14px;
+  
+}
+
+.cardTwo h1{
+  margin-left: 112px;
+  
+} */
